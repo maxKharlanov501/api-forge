@@ -45,4 +45,4 @@ function SignupCard() {
   )
 }
 
-export { AuthCard }
+export { AuthCard, LoginCard, SignupCard }

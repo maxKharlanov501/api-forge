@@ -16,4 +16,7 @@ const authSlice = createSlice({
 })
 
 export const { login, logout } = authSlice.actions
+
+export type AuthState = ReturnType<typeof authSlice.getInitialState>
+
 export default authSlice.reducer

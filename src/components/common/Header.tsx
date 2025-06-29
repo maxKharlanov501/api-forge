@@ -4,9 +4,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "../ui/navigation-menu";
 import { Button } from "../ui/button";
 import { login, logout } from "@/lib/slices/authSlice";
+import { RootState } from "@/lib/store";
 
 export default function Header() {
-  const auth = useSelector((state: any) => state.auth.value)
+  const auth = useSelector((state: RootState) => state.auth.value)
   const dispatch = useDispatch()
   const navigationItems = [
     { label: 'Pricing', href: '/pricing' },
@@ -26,7 +27,7 @@ export default function Header() {
     <div className="flex align-center gap-4 justify-between px-6 py-2">
       <div className="flex items-center gap-4">
         <div className="w-24 h-12">
-          <img src="/assets/logo.png" className="w-full h-full object-cover" />
+          <img src="/assets/logo.png" alt="logo" className="w-full h-full object-cover" />
         </div>
         <NavigationMenu>
           <NavigationMenuList>
